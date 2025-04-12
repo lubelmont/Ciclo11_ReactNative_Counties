@@ -1,11 +1,13 @@
+import { use, useEffect, useRef } from "react";
 import {
+    Animated,
     StyleSheet,
     Text,
     Image,
     Pressable,
   } from "react-native";
 
-export function CountryCard({ country, onPress }) {
+export default function CountryCard({ country, onPress }) {
   return (
 
 
@@ -21,6 +23,35 @@ export function CountryCard({ country, onPress }) {
   );
   
 }
+
+export function AnimatedCountryCard({ country, index }) {
+
+  const opacity = useRef(new Animated.Value(0)).current;
+  
+  useEffect(() => {
+    Animated.timing(opacity, {
+      toValue: 1,
+      duration: 1500,
+      delay: index * 250,
+      useNativeDriver: true,
+    }).start();
+  }, [opacity, index]);
+  
+  
+  return (
+    <Animated.View style={{ opacity }}>
+      <CountryCard
+        country={country}
+        onPress={() =>
+          console.log("Pais --- " + country.name.common)
+        }
+      />
+    </Animated.View>
+  );
+}
+
+
+
 
 const styles = StyleSheet.create({
   

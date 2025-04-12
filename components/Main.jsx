@@ -12,7 +12,7 @@ import {
   FlatList,
 } from "react-native";
 import { getCountriesByRegion } from "../lib/restcountries.js";
-import { CountryCard } from "./CountryCard.jsx";
+import { AnimatedCountryCard, CountryCard } from "./CountryCard.jsx";
 
 export default function Main() {
   const [countries, setCountries] = useState([]);
@@ -35,9 +35,9 @@ export default function Main() {
             data={countries}
             keyExtractor={(item) => item.name.common}
             renderItem={({ item }) => (
-              <CountryCard
+              <AnimatedCountryCard
                 country={item}
-                onPress={() => console.log("Pais --- " + item.name.common)}
+                index={countries.indexOf(item)}
               />
             )}
           
