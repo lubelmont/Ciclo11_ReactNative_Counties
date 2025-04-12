@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
     
     flexDirection: "row",
     justifyContent: "flex-start",
-    marginTop: 20,
+    marginTop: 30,
     paddingBottom: 20,
     width: "100%",
     padding: 20,
+    backgroundColor: "#000",
   },
   logoImage: {
     width: 60,

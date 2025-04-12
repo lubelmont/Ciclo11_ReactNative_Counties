@@ -13,6 +13,7 @@ import {
 } from "react-native";
 import { getCountriesByRegion } from "../lib/restcountries.js";
 import { AnimatedCountryCard, CountryCard } from "./CountryCard.jsx";
+import { Link } from "expo-router";
 
 export default function Main() {
   const [countries, setCountries] = useState([]);
@@ -27,6 +28,14 @@ export default function Main() {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
+
+
+      <Link href={"/about"} style={styles.button_navegacion}>
+        Acerca de...
+
+      </Link>
+
+
       <SafeAreaView>
         {countries.length === 0 ? (
           <ActivityIndicator size={'large'} />
@@ -95,5 +104,9 @@ const styles = StyleSheet.create({
     width: 200,
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  button_navegacion: {
+    color: "blue",
   },
 });
