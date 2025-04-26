@@ -14,6 +14,7 @@ export const Logo = () => {
       <Text style={styles.logoText}>
         Countries in the word
       </Text>
+      
 
 
     </View>
@@ -27,15 +28,15 @@ const styles = StyleSheet.create({
     
     flexDirection: "row",
     justifyContent: "flex-start",
-    marginTop: 30,
+    marginTop: 40,
     paddingBottom: 20,
     width: "100%",
     padding: 20,
     backgroundColor: "#000",
   },
   logoImage: {
-    width: 60,
-    height: 60,
+    width: 40,
+    height: 40,
     borderRadius: 10,
     resizeMode: "contain",
     marginRight: 10,
@@ -45,8 +46,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     fontWeight: "bold",
-    marginTop: 10,
-
+    textAlign: "center",
   },
 
 })

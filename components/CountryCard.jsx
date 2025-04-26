@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { use, useEffect, useRef } from "react";
 import {
     Animated,
@@ -10,7 +11,7 @@ import {
 export default function CountryCard({ country, onPress }) {
   return (
 
-
+    <Link asChild href={`/${country.cca2}`}>
      <Pressable
         style={styles.card}
         onPress={onPress}
@@ -19,6 +20,7 @@ export default function CountryCard({ country, onPress }) {
     
         <Text style={styles.titulo}>{country.name.common}</Text>
     </Pressable>
+    </Link>
 
   );
   
