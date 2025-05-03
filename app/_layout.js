@@ -21,8 +21,7 @@ export default function Layout() {
                         <Link asChild href={"/about"}>
                                 <Pressable>
                                   <InfoIcon />
-                                  <FontAwesome5 name="info-circle" size={24} color="white"/>
-                        
+                                 
                                 </Pressable>
                               </Link>
                         )

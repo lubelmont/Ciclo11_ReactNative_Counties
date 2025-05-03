@@ -1,4 +1,4 @@
-import Main from "../components/Main";
+import Main from "../../components/Main";
 import { Text, View } from "react-native";
 
 export default function Index() {
@@ -10,6 +10,6 @@ export default function Index() {
     //     </View>
     // )
 
-    return <Main />;
+    return <Main />
 
 }
